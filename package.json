@@ -1,0 +1,24 @@
+{
+  "name": "picture-dictionary",
+  "productName": "قاموس مصوّر",
+  "version": "1.0.0",
+  "description": "English-Arabic Picture Dictionary (offline)",
+  "main": "main.js",
+  "scripts": {
+    "start": "node server.js",
+    "desktop": "electron .",
+    "build-win": "electron-builder --win nsis portable",
+    "build-mac": "electron-builder --mac",
+    "build-linux": "electron-builder --linux AppImage"
+  },
+  "build": {
+    "appId": "com.example.picturedictionary",
+    "productName": "قاموس مصوّر",
+    "files": ["main.js", "index.html", "style.css", "data.js", "app.js", "icon.ico", "package.json"],
+    "win": { "icon": "icon.ico", "target": ["nsis", "portable"] }
+  },
+  "devDependencies": {
+    "electron": "^31.0.0",
+    "electron-builder": "^24.13.3"
+  }
+}

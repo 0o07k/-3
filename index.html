@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>قاموس مصوّر</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<svg style="display:none"><symbol id="u" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></symbol></svg>
+<div id="ff"></div>
+<section id="land" class="land">
+<div class="hbar"><button id="hShare" title="مشاركة">⬆️</button><button id="hSearch" title="بحث">🔍</button><h1>قاموس مصوّر</h1><button id="hLamp" title="تغيير اللون">💡</button></div>
+<div class="hmain">
+<div class="hhero"><svg class="lamp" id="lamp" viewBox="0 0 300 400" role="button" aria-label="تغيير اللون"><defs>
+<linearGradient id="cg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffd54a" stop-opacity=".75"/><stop offset="1" stop-color="#ffd54a" stop-opacity=".05"/></linearGradient>
+<radialGradient id="hg"><stop offset="0" stop-color="#ffd54a" stop-opacity=".9"/><stop offset="1" stop-color="#ffd54a" stop-opacity="0"/></radialGradient></defs>
+<ellipse class="halo" cx="150" cy="80" rx="115" ry="60" fill="url(#hg)"/>
+<polygon class="cone" points="100,84 200,84 295,365 5,365" fill="url(#cg)"/>
+<ellipse cx="150" cy="365" rx="145" ry="12" fill="#ffd54a" opacity=".12"/>
+<rect x="148" y="84" width="4" height="272" fill="#10172b"/><ellipse cx="150" cy="358" rx="40" ry="6" fill="#10172b"/>
+<path d="M95 84Q150 18 205 84Z" fill="#0c1222"/><ellipse cx="150" cy="84" rx="55" ry="5" fill="#ffe9a0"/>
+<g class="sw"><line x1="192" y1="86" x2="192" y2="135" stroke="#8a7a4a" stroke-width="1.5"/><circle cx="192" cy="140" r="7" fill="#ffd54a"/><circle cx="192" cy="140" r="16" fill="url(#hg)"/></g></svg><div class="dw"><small>الكلمة اليومية</small><h2 id="dwW"></h2><div id="dwI" class="ipa"></div><div class="fgs"><button data-d="en-GB">🇬🇧</button><span>UK</span><span>US</span><button data-d="en-US">🇺🇸</button></div><div id="dwA" class="dwa"></div></div><button class="go" data-go="view">ابدأ رحلة التعلم</button></div>
+<div class="hpanel"><h2 class="t">dictionary English</h2><div id="hi"></div><div class="hgrid">
+<button class="hc" data-go="type"><div class="tg">🎯</div><b>تدريب الكلمات</b><svg class="arc" viewBox="0 0 100 56"><path d="M8 52A42 42 0 0 1 92 52" fill="none" stroke="rgba(255,255,255,.2)" stroke-width="9" stroke-linecap="round"/><path id="arcP" d="M8 52A42 42 0 0 1 92 52" fill="none" stroke="#fbb40c" stroke-width="9" stroke-linecap="round" stroke-dasharray="0 132"/></svg><div class="cnt"><b id="dayN">0</b>/20</div><small>كلمات اليوم</small><span class="hcBtn">ابدأ التدريب</span></button>
+<button class="hc" data-go="alpha"><div class="abc">Abc</div><b>الحروف الإنجليزية</b><small>تعلم الأبجدية بشكل ممتع</small></button>
+<button class="hc" data-go="view"><div class="ico">📖</div><b>القاموس</b><small id="wc"></small></button>
+<button class="hc" data-go="stats"><div class="ico">📊</div><b>إحصائياتي</b><small>تابع تقدمك اليومي</small></button><button class="hc wide" data-go="match"><div class="ico">🧩</div><div><b>تطابق الكلمات</b><small>طابق الصورة بالكلمة · مستويات تزيد تلقائياً</small></div></button>
+</div></div></div></section>
+<nav id="nav"><button data-n="home" class="on"><span>🏠</span>Home</button><button data-n="practice"><span>🎯</span>Practice</button><button data-n="stats"><span>📊</span>Stats</button><button data-n="profile"><span>👤</span>Profile</button></nav>
+<div id="sheet" class="sheet hide"><div class="sbox"><button class="sx" id="sx">✕</button><div id="sbody"></div></div></div>
+<div id="app" class="hide">
+<header>
+  <h1 id="home" title="الرئيسية">📖 قاموس مصوّر</h1>
+  <button id="modeBtn">✍️ تدريب الكتابة</button>
+  <button id="alphaBtn">🔤 الحروف الإنجليزية</button>
+  <button id="matchBtn">🧩 تطابق الكلمات</button>
+  <button class="thm" title="تغيير اللون">🎨</button>
+  <input id="q" type="search" placeholder="ابحث بالعربي أو الإنجليزي..." autocomplete="off">
+  <div class="cats" id="cats"></div>
+  <div class="count" id="count"></div>
+</header>
+<main id="list"></main>
+</div>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

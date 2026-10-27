@@ -1,0 +1,9 @@
+{
+  "appId": "com.picturedictionary.app",
+  "appName": "قاموس مصوّر",
+  "webDir": "www",
+  "backgroundColor": "#0b1730",
+  "server": {
+    "androidScheme": "https"
+  }
+}
